@@ -13,7 +13,207 @@
       { "regNo": "43422", "firstName": "John", "lastName": "Doe", "courseNo": 3, "totalFees": 300, "regDate": "01-6-2023" }
     ],
     "courses": [
-      { "name": "Classical Guitar", "description": "Guitar classes for...", "instructor": "Ms. Jane Doe", "instrument": "Guitar", "day": "Wednesday", "students": 26, "price": 60, "status": "Active" }
+      {
+        "name": "Piano Masterclass",
+        "description": "Advanced piano techniques and repertoire.",
+        "instructor": "Mr. John Smith",
+        "instrument": "Piano",
+        "day": "Friday",
+        "students": 18,
+        "price": 75,
+        "status": "Active"
+      },
+      {
+        "name": "Acoustic Guitar Basics",
+        "description": "Beginner-friendly acoustic guitar lessons.",
+        "instructor": "Mrs. Emily Johnson",
+        "instrument": "Acoustic Guitar",
+        "day": "Monday",
+        "students": 12,
+        "price": 50,
+        "status": "Archived"
+      },
+      {
+        "name": "Violin Ensemble",
+        "description": "Weekly sessions focusing on ensemble playing.",
+        "instructor": "Dr. Michael Brown",
+        "instrument": "Violin",
+        "day": "Thursday",
+        "students": 20,
+        "price": 65,
+        "status": "Closed"
+      },
+      {
+        "name": "Saxophone Jazz Improvisation",
+        "description": "Explore jazz improvisation techniques on the saxophone.",
+        "instructor": "Ms. Sarah Davis",
+        "instrument": "Saxophone",
+        "day": "Wednesday",
+        "students": 15,
+        "price": 60,
+        "status": "Active"
+      },
+      {
+        "name": "Drum Kit Fundamentals",
+        "description": "Basic drum kit techniques for beginners.",
+        "instructor": "Mr. David White",
+        "instrument": "Drums",
+        "day": "Tuesday",
+        "students": 10,
+        "price": 55,
+        "status": "Active"
+      },
+      {
+        "name": "Electric Bass Workshop",
+        "description": "Intensive workshop focusing on electric bass techniques.",
+        "instructor": "Mr. Kevin Green",
+        "instrument": "Electric Bass",
+        "day": "Monday",
+        "students": 8,
+        "price": 70,
+        "status": "Archived"
+      },
+      {
+        "name": "Classical Violin Repertoire",
+        "description": "Study classical violin pieces with an experienced instructor.",
+        "instructor": "Ms. Julia Lee",
+        "instrument": "Violin",
+        "day": "Thursday",
+        "students": 16,
+        "price": 60,
+        "status": "Active"
+      },
+      {
+        "name": "Flute for Beginners",
+        "description": "Learn the basics of playing the flute from scratch.",
+        "instructor": "Mrs. Anna Carter",
+        "instrument": "Flute",
+        "day": "Wednesday",
+        "students": 14,
+        "price": 55,
+        "status": "Closed"
+      },
+      {
+        "name": "Gospel Choir",
+        "description": "Join a vibrant gospel choir and explore vocal harmonies.",
+        "instructor": "Mr. Thomas Adams",
+        "instrument": "Voice",
+        "day": "Tuesday",
+        "students": 25,
+        "price": 50,
+        "status": "Active"
+      },
+      {
+        "name": "Rock Guitar Shredding",
+        "description": "Master the art of shredding on the electric guitar.",
+        "instructor": "Mr. Eric Turner",
+        "instrument": "Electric Guitar",
+        "day": "Friday",
+        "students": 12,
+        "price": 65,
+        "status": "Active"
+      },
+      {
+        "name": "Jazz Piano Trio",
+        "description": "Form a jazz piano trio and explore jazz standards.",
+        "instructor": "Dr. Paul Harris",
+        "instrument": "Piano",
+        "day": "Monday",
+        "students": 9,
+        "price": 80,
+        "status": "Archived"
+      },
+      {
+        "name": "Cello Techniques Workshop",
+        "description": "Workshop focusing on advanced cello techniques.",
+        "instructor": "Mrs. Sophie Miller",
+        "instrument": "Cello",
+        "day": "Wednesday",
+        "students": 11,
+        "price": 70,
+        "status": "Closed"
+      },
+      {
+        "name": "Folk Music Ensemble",
+        "description": "Explore traditional folk music in an ensemble setting.",
+        "instructor": "Mr. Nathan Brown",
+        "instrument": "Various Instruments",
+        "day": "Thursday",
+        "students": 20,
+        "price": 60,
+        "status": "Active"
+      },
+      {
+        "name": "Trumpet Solo Repertoire",
+        "description": "Study solo trumpet repertoire with personalized coaching.",
+        "instructor": "Mr. Gregory Clark",
+        "instrument": "Trumpet",
+        "day": "Tuesday",
+        "students": 13,
+        "price": 55,
+        "status": "Active"
+      },
+      {
+        "name": "Opera Vocal Masterclass",
+        "description": "Masterclass focusing on operatic vocal techniques.",
+        "instructor": "Ms. Emma Wright",
+        "instrument": "Voice",
+        "day": "Friday",
+        "students": 17,
+        "price": 75,
+        "status": "Archived"
+      },
+      {
+        "name": "Indie Rock Band Formation",
+        "description": "Form an indie rock band and compose original songs.",
+        "instructor": "Mr. Robert Taylor",
+        "instrument": "Various Instruments",
+        "day": "Monday",
+        "students": 6,
+        "price": 70,
+        "status": "Active"
+      },
+      {
+        "name": "Electronic Music Production",
+        "description": "Learn the basics of electronic music production using software.",
+        "instructor": "Dr. Laura Adams",
+        "instrument": "Computer",
+        "day": "Wednesday",
+        "students": 15,
+        "price": 65,
+        "status": "Closed"
+      },
+      {
+        "name": "Classical Guitar Techniques",
+        "description": "Master classical guitar techniques and repertoire.",
+        "instructor": "Mr. Daniel Moore",
+        "instrument": "Classical Guitar",
+        "day": "Thursday",
+        "students": 14,
+        "price": 60,
+        "status": "Active"
+      },
+      {
+        "name": "Latin Percussion Ensemble",
+        "description": "Explore Latin percussion rhythms in an ensemble setting.",
+        "instructor": "Mrs. Maria Garcia",
+        "instrument": "Percussion",
+        "day": "Tuesday",
+        "students": 18,
+        "price": 55,
+        "status": "Active"
+      },
+      {
+        "name": "Chamber Music Repertoire",
+        "description": "Study chamber music repertoire in small ensembles.",
+        "instructor": "Dr. Richard Lewis",
+        "instrument": "Various Instruments",
+        "day": "Friday",
+        "students": 10,
+        "price": 80,
+        "status": "Archived"
+      }
     ]
+    
   }
   

@@ -4,15 +4,30 @@ import { CiSearch } from "react-icons/ci";
 
 const CourseList = ({ data }) => {
   const [search, setSearch] = useState("");
+
+  const filteredCourses = search
+    ? data.filter(course =>
+        course.name.toLowerCase().includes(search.toLowerCase()) ||
+        course.description.toLowerCase().includes(search.toLowerCase()) ||
+        course.instructor.toLowerCase().includes(search.toLowerCase()) ||
+        course.instrument.toLowerCase().includes(search.toLowerCase())
+      )
+    : data;
+
   return (
     <div>
       <div className="flex justify-between border-none outline-none">
-      <h2 className="text-xl font-bold mb-4 p-2 m-2">Course List</h2>
-      <div className="flex justify-center align-middle border h-8 m-2 rounded">
-        <CiSearch size={"1.75rem"} className='m-0'/>
-      <input type="text" value={search} onChange={(e => setSearch(e.target.value))} placeholder="Search" 
-      className="border-none outline-none ring-0 focus:border-none focus:outline-none focus-visible:ring-0 focus:ring-0 m-0 p-2 h-7"/>
-      </div>
+        <h2 className="text-xl font-bold mb-4 p-2 m-2">Course List</h2>
+        <div className="flex justify-center align-middle border h-8 m-2 rounded">
+          <CiSearch size={"1.75rem"} className='m-0'/>
+          <input 
+            type="text" 
+            value={search} 
+            onChange={e => setSearch(e.target.value)} 
+            placeholder="Search" 
+            className="border-none outline-none ring-0 focus:border-none focus:outline-none focus-visible:ring-0 focus:ring-0 m-0 p-2 h-7"
+          />
+        </div>
       </div>
       <Table className="w-full bg-white shadow rounded">
         <TableHeader>
@@ -28,7 +43,7 @@ const CourseList = ({ data }) => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map(course => (
+          {filteredCourses.map(course => (
             <TableRow key={course.name} className="border-t">
               <TableCell className="p-2 text-center">{course.name}</TableCell>
               <TableCell className="p-2 text-center">{course.description}</TableCell>

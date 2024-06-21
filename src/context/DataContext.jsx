@@ -14,6 +14,7 @@ export const DataProvider = ({ children }) => {
     setEnrollments(data.enrollments);
     setStudents(data.students);
     setCourses(data.courses);
+    localStorage.setItem('data', JSON.stringify(data))
   }, []);
 
   return (
