@@ -8,6 +8,7 @@ export const DataProvider = ({ children }) => {
   const [enrollments, setEnrollments] = useState([]);
   const [students, setStudents] = useState([]);
   const [courses, setCourses] = useState([]);
+  const [statusViews, setStatusViews] = useState(false);
 
   useEffect(() => {
     const storedData = JSON.parse(localStorage.getItem('data'));
@@ -28,6 +29,8 @@ export const DataProvider = ({ children }) => {
     localStorage.setItem('data', JSON.stringify(data));
   };
 
+
+
   const addCourse = (newCourse) => {
     const updatedCourses = [...courses, newCourse];
     setCourses(updatedCourses);
@@ -35,7 +38,7 @@ export const DataProvider = ({ children }) => {
   };
 
   return (
-    <DataContext.Provider value={{ overview, enrollments, students, courses, addCourse }}>
+    <DataContext.Provider value={{ overview, enrollments, students, courses, addCourse, statusViews, setStatusViews }}>
       {children}
     </DataContext.Provider>
   );

@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { CiSearch } from "react-icons/ci";
-import { FiEdit, FiArchive, FiX } from "react-icons/fi";
-import actionImg from '../assets/Vector.png'
 
 const CourseList = ({ data }) => {
   const [search, setSearch] = useState("");  
-  const [actionMenuOpen, setActionMenuOpen] = useState(null);
-  const [editModalOpen, setEditModalOpen] = useState(false);
-  const [currentCourse, setCurrentCourse] = useState(null);
 
   const filteredCourses = search
     ? data.filter(course =>
@@ -18,24 +13,6 @@ const CourseList = ({ data }) => {
         course.instrument.toLowerCase().includes(search.toLowerCase())
       )
     : data;
-
-  const handleActionClick = (index, course) => {
-    setCurrentCourse(course);
-    setActionMenuOpen(actionMenuOpen === index ? null : index);
-  };
-
-  const handleEditClick = () => {
-    setEditModalOpen(true);
-    setActionMenuOpen(null);
-  };
-
-  const handleArchiveClick = (course) => {
-    // Archive logic here
-  };
-
-  const handleCloseClick = (course) => {
-    // Close logic here
-  };
 
   return (
     <div>
@@ -63,11 +40,11 @@ const CourseList = ({ data }) => {
             <TableHead className="p-2 text-center font-sans">Students</TableHead>
             <TableHead className="p-2 text-center font-sans">Price</TableHead>
             <TableHead className="p-2 text-center font-sans">Status</TableHead>
-            <TableHead className="p-2 text-center font-sans">Actions</TableHead>
+
           </TableRow>
         </TableHeader>
         <TableBody>
-          {filteredCourses.map((course, index) => (
+          {filteredCourses.map(course => (
             <TableRow key={course.name} className="border-t">
               <TableCell className="p-2 text-center font-sans">{course.name}</TableCell>
               <TableCell className="p-2 text-center font-sans">{course.description}</TableCell>
@@ -77,39 +54,10 @@ const CourseList = ({ data }) => {
               <TableCell className="p-2 text-center font-sans">{course.students}</TableCell>
               <TableCell className="p-2 text-center font-sans">${course.price}</TableCell>
               <TableCell className="p-2 text-center font-sans">{course.status}</TableCell>
-              <TableCell className="p-2 text-center font-sans relative">
-                <button onClick={() => handleActionClick(index, course)}>
-                <img src={actionImg} alt="" />
-                </button>
-                {actionMenuOpen === index && (
-                  <div className="absolute right-0 w-40 bg-white shadow-md rounded p-2">
-                    {course.status !== 'archived' && (
-                      <button onClick={handleEditClick} className="w-full text-left p-2 hover:bg-gray-200">
-                        <FiEdit className="inline mr-2"/> Edit
-                      </button>
-                    )}
-                    <button onClick={() => handleArchiveClick(course)} className="w-full text-left p-2 hover:bg-gray-200">
-                      <FiArchive className="inline mr-2"/> Archive
-                    </button>
-                    {course.status !== 'archived' && (
-                      <button onClick={() => handleCloseClick(course)} className="w-full text-left p-2 hover:bg-gray-200">
-                        <FiX className="inline mr-2"/> Close
-                      </button>
-                    )}
-                  </div>
-                )}
-              </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
-      {editModalOpen && (
-        <EditCourseModal 
-          isOpen={editModalOpen}
-          onClose={() => setEditModalOpen(false)} 
-          course={currentCourse}
-        />
-      )}
     </div>
   );
 };

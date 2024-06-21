@@ -4,7 +4,7 @@ import CourseList from '../components/CourseList';
 import AddCourses from '../components/AddCourses';
 
 const Courses = () => {
-  const { courses, addCourse } = useContext(DataContext);
+  const { courses, addCourse, setStatusViews } = useContext(DataContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleAddCourse = (newCourse) => {
