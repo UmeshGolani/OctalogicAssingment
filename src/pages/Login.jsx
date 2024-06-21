@@ -45,7 +45,7 @@ const Login = () => {
             </div>
             <div className="flex flex-col space-y-2">
               <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-                <Label htmlFor="password" className="block text-sm font-medium text-gray-700 md:w-1/3">
+                <Label htmlFor="password" className="block text-sm font-medium text-gray-700 md:w-1/3 font-sans">
                   Password
                 </Label>
                 <Input
@@ -63,7 +63,7 @@ const Login = () => {
               {passwordError && <p className="text-red-500 text-sm">{passwordError}</p>}
             </div>
             <div className="flex justify-center w-full">
-              <Button type="submit" className="w-20">
+              <Button type="submit" className="w-20 font-sans">
                 Sign in
               </Button>
             </div>

@@ -17,9 +17,9 @@ const CourseList = ({ data }) => {
   return (
     <div>
       <div className="flex justify-between border-none outline-none">
-        <h2 className="text-xl font-bold mb-4 p-2 m-2">Course List</h2>
+        <h2 className="text-white font-semibold leading-6 tracking-wide text-left font-sans">Course List</h2>
         <div className="flex justify-center align-middle border h-8 m-2 rounded">
-          <CiSearch size={"1.75rem"} className='m-0'/>
+          <CiSearch size={"1.75rem"} className='m-0' style={{backgroundColor:"white"}}/>
           <input 
             type="text" 
             value={search} 
