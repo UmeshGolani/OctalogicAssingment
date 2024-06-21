@@ -1,0 +1,19 @@
+{
+    "overview": {
+      "totalStudents": 164,
+      "totalCourses": 12,
+      "totalEarnings": 2000,
+      "bestCourse": "Guitar",
+      "worstCourse": "Flute"
+    },
+    "enrollments": [
+      { "enrNo": "1563124", "name": "John Doe", "course": "Percussion", "fees": 120, "date": "12-08-223" }
+    ],
+    "students": [
+      { "regNo": "43422", "firstName": "John", "lastName": "Doe", "courseNo": 3, "totalFees": 300, "regDate": "01-6-2023" }
+    ],
+    "courses": [
+      { "name": "Classical Guitar", "description": "Guitar classes for...", "instructor": "Ms. Jane Doe", "instrument": "Guitar", "day": "Wednesday", "students": 26, "price": 60, "status": "Active" }
+    ]
+  }
+  

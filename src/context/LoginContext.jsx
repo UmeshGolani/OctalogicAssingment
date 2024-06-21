@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Create the context
 const LoginContext = createContext();
@@ -9,6 +10,8 @@ export const LoginProvider = ({ children }) => {
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+
+  const navigate = useNavigate();
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -58,6 +61,8 @@ export const LoginProvider = ({ children }) => {
       }
     }
 
+    
+
     if (valid) {
       // Submit the form or perform the login action
       alert('Success');
@@ -66,6 +71,8 @@ export const LoginProvider = ({ children }) => {
       setPassword('');
       setPasswordError('');
       setEmailError('');
+      navigate('/home')
+
     }
   };
 
